@@ -1,0 +1,53 @@
+﻿@model ExamenAtomikal.Models.beUsuario
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Registro</title>
+    <link href="~/Content/Estilos.css" rel="stylesheet" />
+    <script src="~/Scripts/Rutinas.js"></script>
+    <script>cargarInicio();</script>
+</head>
+<body>
+    <div>
+        @using (Html.BeginForm("Registro", "Usuario", null, FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+            <h1>Examen Atomikal</h1>
+            <h2>Registro de Empleados</h2>
+            <fieldset>
+                <legend><h3>Datos del Empleado</h3></legend>
+                <table>
+                    <tr>
+                        <td style="width:50%">
+                            <table>
+                                <tr>
+                                    <td style="width:20%">Código:</td>
+                                    <td style="width:80%">@Html.TextBox("Codigo", "", new { id = "txtCodigo", style = "width:60px", maxlength = "5" })</td>
+                                </tr>
+                                <tr>
+                                    <td>Nombre:</td>
+                                    <td>@Html.TextBox("Nombre")</td>
+                                </tr>
+                                <tr>
+                                    <td>Correo:</td>
+                                    <td>@Html.TextBox("Correo")</td>
+                                </tr>  
+                                <tr>
+                                    <td>Contraseña:</td>
+                                    <td>@Html.TextBox("Password", "", new { id = "txtPassword", style = "width:60px", maxlength = "5" })</td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+            <br />
+            <input type="submit" id="btnRegistrar" value="Registrar" />
+            @Html.ActionLink("Listar Usuarios", "Lista")
+        }
+    </div>
+</body>
+</html>

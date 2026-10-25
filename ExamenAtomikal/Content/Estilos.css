@@ -1,0 +1,34 @@
+﻿body {
+    background-color:lightblue;
+}
+.Titulo {
+    background-color:white;
+    color:blue;
+    font-size:large;
+    font-weight:bold;
+}
+.Subtitulo {
+    background-color:lightgray;
+    color:black;
+    font-size:medium;
+    font-weight:bold;
+}
+.Boton {
+    background-color:white;
+    color:blue;
+    font-weight:bold;
+}
+.TablaCentrada {
+    width:100%;
+    text-align:center;
+}
+.FilaCabecera {
+    background-color:blue;
+    color:white;
+    font-weight:bold;
+}
+.FilaDatos {
+    background-color:white;
+    color:blue;
+}
+

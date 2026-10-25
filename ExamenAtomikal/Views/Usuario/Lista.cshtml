@@ -1,0 +1,49 @@
+﻿@model List<ExamenAtomikal.Models.beUsuario>
+@using ExamenAtomikal.Models
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Lista</title>
+    <link href="~/Content/Estilos.css" rel="stylesheet" />
+</head>
+<body>
+    <div>
+        <table class="TablaCentrada">
+            <tr class="Titulo">
+                <td>Lista de Usuarios</td>
+            </tr>
+            <tr>
+                <td>
+                    <table class="TablaCentrada">
+                        <thead>
+                            <tr class="FilaCabecera">
+                                <td style="width:70px">Código</td>
+                                <td style="width:200px">Nombre</td>
+                                <td style="width:100px">Correo</td>
+                                <td style="width:100px">Contraseña</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (beUsuario obeUsuario in Model)
+                            {
+                                <tr class="FilaDatos">
+                                    <td>@obeUsuario.Codigo</td>
+                                    <td>@obeUsuario.Nombre</td>
+                                    <td>@obeUsuario.Correo</td>
+                                    <td>@obeUsuario.Password</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                    <br />
+                    @Html.ActionLink("Regresar", "Registro")
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
