@@ -1,0 +1,15 @@
+cat > .gitignore <<'EOF'
+# Archivos internos de Git
+**/.git/
+**/.git_backup/
+
+# Archivos generados por Visual Studio y .NET
+[Bb]in/
+[Oo]bj/
+.vs/
+*.user
+*.suo
+
+# Archivos temporales
+*.cache
+EOF
